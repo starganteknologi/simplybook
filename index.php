@@ -16,13 +16,15 @@ $client = new JsonRpcClient('https://user-api.simplybook.me' . '/admin/', array(
 ));
 
 $params =[
-"date_from"=>"2015-12-29",
-"date_to"=>"2015-12-29",
-"booking_type"=>"cancelled",
-"event_id"=>"5",
+"date_from"=>"2020-03-01",
+"date_to"=>"2020-03-10",
+//"booking_type"=>"cancelled",
+//"event_id"=>"5",
 "order"=>"start_date"
 ];
 
 $bookings = $client->getBookings($params);
+
+var_dump($bookings);
 
 ?>
